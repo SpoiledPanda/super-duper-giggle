@@ -18,6 +18,7 @@ def display_greeting_message():
         with open(github_output_path, 'a') as output_file:
             output_file.write(f"{output_var}\n")
     else:
+        # Legacy fallback for older GitHub Actions runners (deprecated Oct 2022)
         print(f"::set-output name=time::{current_timestamp}")
 
 if __name__ == "__main__":
